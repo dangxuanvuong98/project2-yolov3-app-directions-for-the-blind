@@ -1,0 +1,4 @@
+mysite/__pycache__
+yolo_model
+polls/__pycache__
+train.tfrecords
