@@ -13,7 +13,7 @@ export class HomePage {
     video: false
   };
   imageBlob: any;
-  number_for_camera = 0;;
+  number_for_camera = 1;
   statusAuto = false;
   checkCordova;
   matches;
@@ -41,9 +41,11 @@ export class HomePage {
   }
 
   changeCam() {
-    this.number_for_camera++;
-    if (this.number_for_camera == this.device.videoSelect.length) {
-      this.number_for_camera = 0;
+    if (this.number_for_camera == 0) {
+    	this.number_for_camera = 1;
+    }
+    else {
+    	this.number_for_camera = 0;
     }
     this.constraints.video = this.device.videoSelect[this.number_for_camera].deviceId;
     console.log(this.device.videoSelect[this.number_for_camera].deviceId);
